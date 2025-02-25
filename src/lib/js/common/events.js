@@ -54,6 +54,7 @@ const events = {
     return this
   },
   formeoSaved: evt => defaultCustomEvent(evt, EVENT_FORMEO_SAVED),
+  formeoChanged: evt => defaultCustomEvent(evt, EVENT_FORMEO_CHANGED),
   formeoUpdated: evt => defaultCustomEvent(evt, EVENT_FORMEO_UPDATED),
   formeoCleared: evt => defaultCustomEvent(evt, EVENT_FORMEO_CLEARED),
   formeoOnRender: evt => defaultCustomEvent(evt, EVENT_FORMEO_ON_RENDER),
@@ -124,6 +125,15 @@ document.addEventListener('confirmClearAll', evt => {
 })
 
 document.addEventListener(EVENT_FORMEO_SAVED, ({ timeStamp, type, detail: { formData } }) => {
+  const evt = {
+    timeStamp,
+    type,
+    formData,
+  }
+  events.opts.onSave(evt)
+})
+
+document.addEventListener(EVENT_FORMEO_CHANGED, ({ timeStamp, type, detail: { formData } }) => {
   const evt = {
     timeStamp,
     type,
