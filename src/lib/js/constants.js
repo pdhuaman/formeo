@@ -124,6 +124,7 @@ export const ANIMATION_SPEED_SLOW = Math.round(ANIMATION_SPEED_BASE * 2)
 //  Event constants
 export const EVENT_FORMEO_SAVED = 'formeoSaved'
 export const EVENT_FORMEO_UPDATED = 'formeoUpdated'
+export const EVENT_FORMEO_CHANGED = 'formeoChanged'
 export const EVENT_FORMEO_UPDATED_STAGE = 'formeoUpdatedStage'
 export const EVENT_FORMEO_UPDATED_ROW = 'formeoUpdatedRow'
 export const EVENT_FORMEO_UPDATED_COLUMN = 'formeoUpdatedColumn'
